@@ -1,5 +1,5 @@
 
-# Connecting to TryHackMe OpenVPN server for interacting with their VMs:
+# Connecting to TryHackMe OpenVPN server:
 
 Run this command: 
 
