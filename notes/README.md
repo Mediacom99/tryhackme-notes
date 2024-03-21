@@ -41,3 +41,7 @@ ssh tryhackme@<ip-address> (passw = tryhackme)
 
     1. Enumeration (understand the networks structure, which hosts are up 
                     and which ports are open and their relative services)
+
+# Useful commands cheat sheet:
+
+    1. ssh -v -i <private-rsa-id> user@<ip-address>
