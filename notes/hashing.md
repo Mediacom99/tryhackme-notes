@@ -14,3 +14,10 @@
 
 -- Jumbo John The Ripper:
        ``` john --format=[format] --wordlist=[path to wordlist] [path to file]```
+
+-- Use John with /etc/shadow hashes:
+
+    1. First use command 'unshadow' to turn file 
+        into smth readable by John
+    2. unshadow combines passwd and shadow file 
+        to get a John output to crack an hash
