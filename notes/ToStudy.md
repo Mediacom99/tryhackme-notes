@@ -9,3 +9,4 @@
     7. PHP
     8. Unix tools, filesystem
     9. shells 
+    10. Regular Expressions (Regex)
