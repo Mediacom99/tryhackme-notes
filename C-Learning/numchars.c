@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int main() {
+int count_chars(void) {
 
 
 	int nc, c;
@@ -9,14 +9,19 @@ int main() {
 	nc = 0;
 	while( (c = getchar()) != EOF)
 	{
-	
-		if(c != '\n' && c != 32)
+		// Count only ASCII printable chars
+		if(c >= 32 && c<= 126) 
 		{
 		   ++nc;
-		  fprintf(stdout,"You typed: %c\n", c);
+		  //fprintf(stderr,"You typed: %c\n", c);
 		
 		}
 	}
-	printf("\n\tYou typed %d chars\n\n", nc);
-	return 0;
+	return nc;
+}
+
+int main(void) 
+{
+
+	printf("\n\tYou typed %d ASCII printable chars\n\n", count_chars());
 }
