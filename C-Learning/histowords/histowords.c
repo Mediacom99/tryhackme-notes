@@ -11,12 +11,8 @@
 #include <stdio.h>
 
 #define MAX_WORD_LEN 256 
-#define IN 1
-#define OUT 0
-#define HIST 2
-#define NO_HIST 3
 
-void print_hist(int* arr, int len, int flag)
+void print_hist(int* arr, int len)
 {
     int temp;
     for(int i = 0; i < len; ++i)
@@ -72,27 +68,24 @@ int main(void)
     
     int hist[MAX_WORD_LEN]; 
     int wl = 0; // word length counter
-    int state = OUT; //check if inside a word or not
     int c; //current char holder
 
     fill_zeroes(hist, MAX_WORD_LEN);
-    while((c = getchar())!= EOF)
+    while( (c = getchar()) != EOF)
     {
         if(not_valid(c))
         {
-            state = OUT;
             if(wl > 0 && wl < MAX_WORD_LEN) hist[wl]+=1;
             wl = 0;
         }
         else
         {
-            state = IN;
             ++wl;
         }
     }
 
    // print_arr(hist, MAX_WORD_LEN);
     printf("Word length:\tHow many:\n");
-    print_hist(hist, MAX_WORD_LEN,NO_HIST);
+    print_hist(hist, MAX_WORD_LEN);
     return 0;
 }
