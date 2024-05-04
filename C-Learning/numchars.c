@@ -22,6 +22,5 @@ int count_chars(void) {
 
 int main(void) 
 {
-
 	printf("\n\tYou typed %d ASCII printable chars\n\n", count_chars());
 }
