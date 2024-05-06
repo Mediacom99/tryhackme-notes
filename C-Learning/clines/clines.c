@@ -38,6 +38,6 @@ int main(int argc, char** argv)
 		}
 	}
 	printf("There are %d %s in the input text.\n", nl, modes[sel]);
-	
+
 	return 0;
 }
