@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAXOP 100 //Max size of operands or operator 
+#define MAXOP 256 //Max size of operands or operator 
  
 int stack[MAXOP]; //Stack
 int head = 0; //Free position on the stack
@@ -111,7 +111,7 @@ int main(void)
     }
 
   if(head == 0 || head >= MAXOP) {
-    fprintf(stderr, "[ERROR] Something went wrong, check inpu! Exiting...\n");
+    fprintf(stderr, "[ERROR] Something went wrong, check input! Exiting...\n");
   }
   else {
     printf("The given expression evaluates to: %d\n", pop());
