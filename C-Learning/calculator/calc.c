@@ -2,44 +2,7 @@
 //@Author: Edoardo Bertoli
 
 #include <stdio.h>
-#include <stdlib.h>
-
-#define MAXOP 256 //Max size of operands or operator 
- 
-int stack[MAXOP]; //Stack
-int head = 0; //Free position on the stack
-
-//Functions for stack manipulation
-int pop(void);
-void push(int);
-
-
-int pop(void)
-{
-  //Check if head is valid
-  if(head <= MAXOP && head > 0)
-    {
-      --head;
-      return stack[head];
-    }
-  else{
-    fprintf(stderr, "[ERROR] Could not pop, head position counter is not valid! Exiting...\n");
-    exit(EXIT_FAILURE);
-  }
-}
-
-void push(int num)
-{
-    if(head <= MAXOP && head >= 0) {
-    stack[head] = num;
-    head++;
-    return;
-  }
-  else {
-    fprintf(stderr, "[ERROR] Could not push, head position counter is not valid! Exiting...\n");
-    exit(EXIT_FAILURE);
-  }
-}
+#include "stack.h"
 
 
 int main(void)
@@ -60,10 +23,11 @@ int main(void)
      Then I could also add the operator mod % and provisions for negative numbers, also commands to clear the stack
   */
 
+  
+  
+  printf("Enter the Reverse Polish expression you want to calculate (only positive integers as input, enter newline/return when done):\n");
 
   head = 0;
-
-  printf("Enter the Reverse Polish expression you want to calculate (only positive integers as input, enter newline/return when done):\n");
   
   int type;
   while((type = fgetc(stdin)) != '\n')
@@ -119,6 +83,3 @@ int main(void)
   
   return 0;
 }
-
-
-
