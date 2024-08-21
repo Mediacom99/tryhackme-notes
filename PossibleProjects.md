@@ -2,7 +2,7 @@
 # Table of Contents
 
 1.  [Active projects](#org0823526)
-2.  [Programming projects index by language:](#org50e8d3c)
+2.  [Programming projects indexed by language:](#org50e8d3c)
     1.  [Zig](#orgd5e4e1d)
     2.  [Rust projects](#org944d2f5)
     3.  [C projects](#org4d3398b)
