@@ -18,7 +18,7 @@
 
 <a id="org50e8d3c"></a>
 
-# Programming projects index by language:
+# Programming projects indexed by language:
 
 
 <a id="orgd5e4e1d"></a>
